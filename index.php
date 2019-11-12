@@ -731,7 +731,7 @@ if (isset($_POST['sing'])) {
 
 		</section>-->
 
-		section id="dress">
+		<section id="dress">
 			<aside id="colorlib-hero" class="breadcrumbs">
 				<div class="flexslider">
 					<ul class="slides">
@@ -761,7 +761,7 @@ if (isset($_POST['sing'])) {
 								
 										
 								
-								<div class="col-md-4 text-center">
+								<!--<div class="col-md-4 text-center">
 									<div class="product-entry">
 										<div class="product-img" style="background-image: url(images/item-6.jpg);">
 											<p class="tag"><span class="new">New</span></p>
@@ -779,7 +779,36 @@ if (isset($_POST['sing'])) {
 											<p class="price"><span>$300.00</span></p>
 										</div>
 									</div>
+								</div>-->
+								<?php
+                                   $sql_dres="SELECT * FROM item WHERE ids='1'";
+                                   $res_d=mysqli_query($conn,$sql_dres);
+                                   while ($rows_d=mysqli_fetch_array($res_d)) {
+                                   	echo '
+                                   	<div class="col-md-4 text-center">
+									<div class="product-entry">
+										<div class="product-img" style="background-image: url('.$rows_d['paths'].');">
+											<p class="tag"><span class="new">New</span></p>
+											<div class="cart">
+												<p>
+													<span class="addtocart"><a href="cart.html"><i class="icon-shopping-cart"></i></a></span>
+													<span><a href="product-detail.html"><i class="icon-eye"></i></a></span>
+													<span><a href="#"><i class="icon-heart3"></i></a></span>
+													<span><a href="add-to-wishlist.html"><i class="icon-bar-chart"></i></a></span>
+												</p>
+											</div>
+										</div>
+										<div class="desc">
+											<h3><a href="product-detail.html">'.$rows_d['title'].'</a></h3>
+											<p class="price"><span>'.$rows_d['price'].'</span></p>
+										</div>
+									</div>
 								</div>
+
+                                   	';
+                                   }
+
+								?>
 								
 								
 								
@@ -896,7 +925,7 @@ if (isset($_POST['sing'])) {
 						<div class="row">
 							<div class="col-md-10 col-md-push-2">
 								<div class="row row-pb-lg">
-									<div class="col-md-4 text-center">
+									<!--<div class="col-md-4 text-center">
 										<div class="product-entry">
 											<div class="product-img" style="background-image: url(images/shoes1.jpg);">
 												<p class="tag"><span class="new">New</span></p>
@@ -1122,7 +1151,37 @@ if (isset($_POST['sing'])) {
 											</div>
 										</div>
 									</div>
+								</div>-->
+								<?php
+                                   $sql_dres="SELECT * FROM item WHERE ids='2'";
+                                   $res_d=mysqli_query($conn,$sql_dres);
+                                   while ($rows_d=mysqli_fetch_array($res_d)) {
+                                   	echo '
+                                   	<div class="col-md-4 text-center">
+									<div class="product-entry">
+										<div class="product-img" style="background-image: url('.$rows_d['paths'].');">
+											<p class="tag"><span class="new">New</span></p>
+											<div class="cart">
+												<p>
+													<span class="addtocart"><a href="cart.html"><i class="icon-shopping-cart"></i></a></span>
+													<span><a href="product-detail.html"><i class="icon-eye"></i></a></span>
+													<span><a href="#"><i class="icon-heart3"></i></a></span>
+													<span><a href="add-to-wishlist.html"><i class="icon-bar-chart"></i></a></span>
+												</p>
+											</div>
+										</div>
+										<div class="desc">
+											<h3><a href="product-detail.html">'.$rows_d['title'].'</a></h3>
+											<p class="price"><span>'.$rows_d['price'].'</span></p>
+										</div>
+									</div>
 								</div>
+
+                                   	';
+                                   }
+
+								?>
+							</div>
 								<div class="row">
 									<div class="col-md-12">
 										<ul class="pagination">
@@ -1231,7 +1290,7 @@ if (isset($_POST['sing'])) {
 							<div class="row">
 								<div class="col-md-10 col-md-push-2">
 									<div class="row row-pb-lg">
-										<div class="col-md-4 text-center">
+										<!--<div class="col-md-4 text-center">
 											<div class="product-entry">
 												<div class="product-img" style="background-image: url(images/jw1.jpg);">
 													<p class="tag"><span class="new">New</span></p>
@@ -1456,7 +1515,36 @@ if (isset($_POST['sing'])) {
 													<p class="price"><span>$300.00</span></p>
 												</div>
 											</div>
+										</div>-->
+										<?php
+                                   $sql_dres="SELECT * FROM item WHERE ids='4'";
+                                   $res_d=mysqli_query($conn,$sql_dres);
+                                   while ($rows_d=mysqli_fetch_array($res_d)) {
+                                   	echo '
+                                   	<div class="col-md-4 text-center">
+									<div class="product-entry">
+										<div class="product-img" style="background-image: url('.$rows_d['paths'].');">
+											<p class="tag"><span class="new">New</span></p>
+											<div class="cart">
+												<p>
+													<span class="addtocart"><a href="cart.html"><i class="icon-shopping-cart"></i></a></span>
+													<span><a href="product-detail.html"><i class="icon-eye"></i></a></span>
+													<span><a href="#"><i class="icon-heart3"></i></a></span>
+													<span><a href="add-to-wishlist.html"><i class="icon-bar-chart"></i></a></span>
+												</p>
+											</div>
 										</div>
+										<div class="desc">
+											<h3><a href="product-detail.html">'.$rows_d['title'].'</a></h3>
+											<p class="price"><span>'.$rows_d['price'].'</span></p>
+										</div>
+									</div>
+								</div>
+
+                                   	';
+                                   }
+
+								?>
 									</div>
 									<div class="row">
 										<div class="col-md-12">
@@ -1585,7 +1673,7 @@ if (isset($_POST['sing'])) {
 													</div>
 												</div>
 											</div>
-											<div class="col-md-4 text-center">
+											<!--<div class="col-md-4 text-center">
 												<div class="product-entry">
 													<div class="product-img" style="background-image: url(images/bag2.jpg);">
 														<p class="tag"><span class="sale">Sale</span></p>
@@ -1791,7 +1879,36 @@ if (isset($_POST['sing'])) {
 														<p class="price"><span>$300.00</span></p>
 													</div>
 												</div>
+											</div>-->
+											<?php
+                                   $sql_dres="SELECT * FROM item WHERE ids='3'";
+                                   $res_d=mysqli_query($conn,$sql_dres);
+                                   while ($rows_d=mysqli_fetch_array($res_d)) {
+                                   	echo '
+                                   	<div class="col-md-4 text-center">
+									<div class="product-entry">
+										<div class="product-img" style="background-image: url('.$rows_d['paths'].');">
+											<p class="tag"><span class="new">New</span></p>
+											<div class="cart">
+												<p>
+													<span class="addtocart"><a href="cart.html"><i class="icon-shopping-cart"></i></a></span>
+													<span><a href="product-detail.html"><i class="icon-eye"></i></a></span>
+													<span><a href="#"><i class="icon-heart3"></i></a></span>
+													<span><a href="add-to-wishlist.html"><i class="icon-bar-chart"></i></a></span>
+												</p>
 											</div>
+										</div>
+										<div class="desc">
+											<h3><a href="product-detail.html">'.$rows_d['title'].'</a></h3>
+											<p class="price"><span>'.$rows_d['price'].'</span></p>
+										</div>
+									</div>
+								</div>
+
+                                   	';
+                                   }
+
+								?>
 										</div>
 										<div class="row">
 											<div class="col-md-12">
@@ -1908,7 +2025,7 @@ if (isset($_POST['sing'])) {
 									<div class="row">
 										<div class="col-md-10 col-md-push-2">
 											<div class="row row-pb-lg">
-												<div class="col-md-4 text-center">
+												<!--<div class="col-md-4 text-center">
 													<div class="product-entry">
 														<div class="product-img" style="background-image: url(images/vin1.jpg);">
 															<p class="tag"><span class="new">New</span></p>
@@ -2133,7 +2250,36 @@ if (isset($_POST['sing'])) {
 															<p class="price"><span>$300.00</span></p>
 														</div>
 													</div>
-												</div>
+												</div>-->
+												<?php
+                                   $sql_dres="SELECT * FROM item WHERE ids='5'";
+                                   $res_d=mysqli_query($conn,$sql_dres);
+                                   while ($rows_d=mysqli_fetch_array($res_d)) {
+                                   	echo '
+                                   	<div class="col-md-4 text-center">
+									<div class="product-entry">
+										<div class="product-img" style="background-image: url('.$rows_d['paths'].');">
+											<p class="tag"><span class="new">New</span></p>
+											<div class="cart">
+												<p>
+													<span class="addtocart"><a href="cart.html"><i class="icon-shopping-cart"></i></a></span>
+													<span><a href="product-detail.html"><i class="icon-eye"></i></a></span>
+													<span><a href="#"><i class="icon-heart3"></i></a></span>
+													<span><a href="add-to-wishlist.html"><i class="icon-bar-chart"></i></a></span>
+												</p>
+											</div>
+										</div>
+										<div class="desc">
+											<h3><a href="product-detail.html">'.$rows_d['title'].'</a></h3>
+											<p class="price"><span>'.$rows_d['price'].'</span></p>
+										</div>
+									</div>
+								</div>
+
+                                   	';
+                                   }
+
+								?>
 											</div>
 											<div class="row">
 												<div class="col-md-12">
@@ -2247,7 +2393,7 @@ if (isset($_POST['sing'])) {
 										<div class="row">
 											<div class="col-md-10 col-md-push-2">
 												<div class="row row-pb-lg">
-													<div class="col-md-4 text-center">
+													<!--<div class="col-md-4 text-center">
 														<div class="product-entry">
 															<div class="product-img" style="background-image: url(images/other1.jpg);">
 																<p class="tag"><span class="new">New</span></p>
@@ -2472,7 +2618,36 @@ if (isset($_POST['sing'])) {
 																<p class="price"><span>$300.00</span></p>
 															</div>
 														</div>
-													</div>
+													</div>-->
+													<?php
+                                   $sql_dres="SELECT * FROM item WHERE ids='6'";
+                                   $res_d=mysqli_query($conn,$sql_dres);
+                                   while ($rows_d=mysqli_fetch_array($res_d)) {
+                                   	echo '
+                                   	<div class="col-md-4 text-center">
+									<div class="product-entry">
+										<div class="product-img" style="background-image: url('.$rows_d['paths'].');">
+											<p class="tag"><span class="new">New</span></p>
+											<div class="cart">
+												<p>
+													<span class="addtocart"><a href="cart.html"><i class="icon-shopping-cart"></i></a></span>
+													<span><a href="product-detail.html"><i class="icon-eye"></i></a></span>
+													<span><a href="#"><i class="icon-heart3"></i></a></span>
+													<span><a href="add-to-wishlist.html"><i class="icon-bar-chart"></i></a></span>
+												</p>
+											</div>
+										</div>
+										<div class="desc">
+											<h3><a href="product-detail.html">'.$rows_d['title'].'</a></h3>
+											<p class="price"><span>'.$rows_d['price'].'</span></p>
+										</div>
+									</div>
+								</div>
+
+                                   	';
+                                   }
+
+								?>
 												</div>
 												<div class="row">
 													<div class="col-md-12">
@@ -2607,8 +2782,12 @@ if (isset($_POST['sing'])) {
 	</section>
 
 <!-- singup-->
+<?php
 
-<section id="singup">
+if (isset($_SESSION['email'])) {
+	# code...
+}else{
+echo '<section id="singup">
 
 	<aside id="colorlib-hero" class="breadcrumbs">
 		<div class="flexslider">
@@ -2756,7 +2935,10 @@ if (isset($_POST['sing'])) {
 		</div>
 	</div>
 
-</section>
+</section>';
+
+}
+?>
 <!-- contant-->
 
 <section id="contantus">
@@ -3186,10 +3368,48 @@ if (isset($_POST['sing'])) {
 
 		<div class="col-md-10 col-md-offset-1">
 			<div class="contact-wrap">
-				<form action="#">
+				<?php
+                 if (isset($_FILES['item'])) {
+                 	print_r($_FILES['item']);
+                 	$fname=$_FILES['item']['name'];
+                 	$ftype=$_FILES['item']['type'];
+                 	$ftem=$_FILES['item']['tmp_name'];
+                 	$size=$_FILES['item']['size'];
+
+                 	$typ=['jpg','png'];
+
+                 	$exp=explode('.', $fname);
+                 	$ends=end($exp);
+                 	$ends=strtolower($ends);
+                 	echo $ends;
+                 	$name=strip_tags($_POST['name']);
+                 	$type=strip_tags($_POST['Type']);
+                 	$price=strip_tags($_POST['price']);
+                 	$fixed=$_POST['fixed'];
+                 	$Describtion=strip_tags($_POST['Describtion']);
+                 	$Communication=strip_tags($_POST['Communication']);
+                 	$conditions=strip_tags($_POST['conditions']);
+
+
+                 	if (in_array($ends, $typ)) {
+                 		$path="images/item/$fname";
+                 		//move_uploaded_file($frem, $path)
+                 		if (move_uploaded_file($ftem, $path)) {
+                 			$sql_insert_item="INSERT INTO item (title,ids,desr,paths,status,price,Communication,conditions)VALUES('$name','$type','$Describtion','$path','ts','$price','$Communication','$conditions')";
+                 			if (mysqli_query($conn,$sql_insert_item)) {
+                 				# code...
+                 			}
+                 		}
+                 	}
+
+                 }
+
+
+				?>
+				<form method="POST" enctype="multipart/form-data">
 
 <label for="subject">Upload image : </label>
-<input  type="file" >
+<input  type="file" name="item">
 </br>
 <label for="subject">Name : </label>
 <input  class="form-control" type="text" name="name"  placeholder="Write the name..">
@@ -3197,12 +3417,20 @@ if (isset($_POST['sing'])) {
 <label class="font">Type : </label>
 </br>
 <select name="Type">
-<option value="Dresses">Dresses</option>
+<!--<option value="Dresses">Dresses</option>
 <option value="Shoes">Shoes</option>
 <option value="Bags" >Bags</option>
 <option value="Jewelry">Jewelry</option>
 <option value="Vintage" >Vintage</option>
-<option value="Others">Others</option>
+<option value="Others">Others</option>-->
+<?php
+$sql_opy="SELECT * FROM category ";
+$resuo=mysqli_query($conn,$sql_opy);
+while ($rows=mysqli_fetch_array($resuo)) {
+	# code...
+	echo '<option value="'.$rows['cid'].'" >'.$rows['came'].'</option>';
+}
+?>
 </select>
 </br>
 </br>
@@ -3213,19 +3441,19 @@ if (isset($_POST['sing'])) {
 <label for="subject">Price Type : </label>
 
 <input  class="radio"type="radio" name="fixed" value="fixed">  Fixed
-<input class="radio"type="radio" name="auction" value="auction">  Auction
+<input class="radio"type="radio" name="fixed" value="auction">  Auction
 </br>
 <label for="subject">Describtion: </label>
  </br>
-<textarea class="form-control" name="Describtion" rows="8" cols="80" > Write details</textarea>
+<textarea class="form-control" name="Describtion" rows="8" cols="80" placeholder=" Write details"></textarea>
 </br>
 <label for="subject">Communication : </label>
 </br>
-<textarea  class="form-control" name="Communication" rows="8" cols="80"> Write the way of Communication</textarea>
+<textarea  class="form-control" name="Communication" rows="8" cols="80" placeholder="Write the way of Communication"> </textarea>
 </br>
 <label for="subject">Conditions : </label>
 </br>
-<textarea class="form-control"  name="conditions" rows="8" cols="80"> Write your conditions</textarea>
+<textarea class="form-control"  name="conditions" rows="8" cols="80" placeholder="Write your conditions"> </textarea>
 </br>
 <div class="form-group text-center">
 <input  class="btn btn-primary" type="submit" name="submit" value="submit">
