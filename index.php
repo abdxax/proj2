@@ -17,7 +17,7 @@ if (isset($_POST['btn1'])) {
 		if (mysqli_query($conn,$sql_user)) {
 			$sql_info="INSERT INTO info(name,phone,email) VALUES('$name','$phone','$email')";
 			if (mysqli_query($conn,$sql_info)) {
-				# code...
+				header("location:index.php");
 			}
 		}
 		else{
@@ -35,8 +35,11 @@ if (isset($_POST['sing'])) {
 	$res=mysqli_query($conn,$sql_login);
 	if (mysqli_num_rows($res)==1) {
 		$_SESSION['email']=$email;
+		header("location:index.php");
 	}
 }
+
+
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -138,7 +141,7 @@ if (isset($_POST['sing'])) {
 									echo '
 									<li><a  id="adsid"  href="#ads">creat an Advertising</a></li>
 
-                                             <li><a  id="adsid"  href="#ads">Log Out</a></li>
+                                             <li><a  id="adsid"  href="logout.php">Log Out</a></li>
 									';
 								}else{
 									echo '<li><a  class="shop2" href="#singup">singup</a></li>
@@ -3398,6 +3401,10 @@ echo '<section id="singup">
                  			$sql_insert_item="INSERT INTO item (title,ids,desr,paths,status,price,Communication,conditions)VALUES('$name','$type','$Describtion','$path','ts','$price','$Communication','$conditions')";
                  			if (mysqli_query($conn,$sql_insert_item)) {
                  				# code...
+                 				//header("location:index.php");
+                 				//header('Refresh:3 ');
+                 				//header("refresh: 3; url = https://www.geeksforgeeks.org/"); 
+                 			
                  			}
                  		}
                  	}
