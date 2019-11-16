@@ -139,13 +139,13 @@ if (isset($_POST['sing'])) {
 								if (isset($_SESSION['email'])) {
 									# code...
 									echo '
-									<li><a  id="adsid"  href="#ads">creat an Advertising</a></li>
+									<li><a  id="adsid"  href="#ads">Creat an Advertising</a></li>
 
                                              <li><a  id="adsid"  href="logout.php">Log Out</a></li>
 									';
 								}else{
-									echo '<li><a  class="shop2" href="#singup">singup</a></li>
-								<li><a  class="shop2" href="#singin">singin</a></li>';
+									echo '<li><a  class="shop2" href="#singup">SignUp</a></li>
+								<li><a  class="shop2" href="#singin">SignIn</a></li>';
 								}
 
 
@@ -331,7 +331,7 @@ if (isset($_POST['sing'])) {
 								</div>
 							</div>
 							<div class="desc">
-								<h3><a href="shop.html">Floral Dress</a></h3>
+								<h3><a href="shop.html"> Dress</a></h3>
 								<p class="price"><span>$300.00</span></p>
 							</div>
 						</div>
@@ -350,7 +350,7 @@ if (isset($_POST['sing'])) {
 								</div>
 							</div>
 							<div class="desc">
-								<h3><a href="shop.html">Floral Dress</a></h3>
+								<h3><a href="shop.html">Wedding Dress</a></h3>
 								<p class="price"><span>$300.00</span></p>
 							</div>
 						</div>
@@ -369,7 +369,7 @@ if (isset($_POST['sing'])) {
 								</div>
 							</div>
 							<div class="desc">
-								<h3><a href="shop.html">Floral Dress</a></h3>
+								<h3><a href="shop.html">Dior Dress</a></h3>
 								<p class="price"><span>$300.00</span></p>
 							</div>
 						</div>
@@ -388,7 +388,7 @@ if (isset($_POST['sing'])) {
 								</div>
 							</div>
 							<div class="desc">
-								<h3><a href="#home">Floral Dress</a></h3>
+								<h3><a href="#home">Pink Dress</a></h3>
 								<p class="price"><span>$300.00</span></p>
 							</div>
 						</div>
@@ -2778,6 +2778,27 @@ if (isset($_POST['sing'])) {
 							</div>
 						</div>
 					</div>
+
+					<div class="about-flex">
+
+						<div class="col-three-forth">
+							<h2>Polices</h2>
+							<div class="row">
+								<div class="col-md-12">
+
+									<ul>
+										<li>Shipping is available for all Hail neighborhoods and villages</li>
+										<li>Delivery is free at the time of purchase for SAR300</li>
+										<li>Pay on Receipt</li>
+										<li>Payment service is available upon delivery in Hail city and added SAR10 commission</li>
+										<li>Replacement and retrieval:</li>
+										<p>Return and replacment includes all products in case of customer dissatisfaction or damage during delivary of the product, design defect or delivary error with the company incarring the cost of transportation</p>
+									</ul>
+
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -2801,7 +2822,7 @@ echo '<section id="singup">
 						<div class="row">
 							<div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12 slider-text">
 								<div class="slider-text-inner text-center">
-									<h1>Sing Up</h1>
+									<h1>Sign Up</h1>
 									<h2 class="bread"><span><a href="#home">Home</a></span> <span>Sign Up</span></h2>
 								</div>
 							</div>
@@ -2818,7 +2839,7 @@ echo '<section id="singup">
 
 				<div class="col-md-10 col-md-offset-1">
 					<div class="contact-wrap">
-						<h3>Sing Up</h3>
+						<h3>Sign Up</h3>
 						<form id="form1"  method="POST">
 							<div class="row form-group">
 								<div class="col-md-6 padding-bottom">
@@ -2902,7 +2923,7 @@ echo '<section id="singup">
 
 				<div class="col-md-10 col-md-offset-1">
 					<div class="contact-wrap">
-						<h3>Sing In</h3>
+						<h3>Sign In</h3>
 						<form id="form2" method="POST">
 
 
@@ -3446,10 +3467,10 @@ while ($rows=mysqli_fetch_array($resuo)) {
 <input  class="form-control" type="text" name="price"  placeholder="Write the price..">
 </br>
 <label for="subject">Price Type : </label>
-
+<!--
 <input  class="radio"type="radio" name="fixed" value="fixed">  Fixed
 <input class="radio"type="radio" name="fixed" value="auction">  Auction
-</br>
+</br> 
 <label for="subject">Describtion: </label>
  </br>
 <textarea class="form-control" name="Describtion" rows="8" cols="80" placeholder=" Write details"></textarea>
@@ -3461,7 +3482,7 @@ while ($rows=mysqli_fetch_array($resuo)) {
 <label for="subject">Conditions : </label>
 </br>
 <textarea class="form-control"  name="conditions" rows="8" cols="80" placeholder="Write your conditions"> </textarea>
-</br>
+</br> -->
 <div class="form-group text-center">
 <input  class="btn btn-primary" type="submit" name="submit" value="submit">
 <input class="btn btn-primary" type="reset" name="reset" value="reset">
